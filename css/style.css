@@ -1,0 +1,49 @@
+:root {
+    --rosewood: #C3185B;
+    --snow: #FCF9F7;
+    --night-bordeaux: #3D0E20;
+}
+body {
+    font-family: 'Poppins', 'Arial', 'Helvetica', 'Trebuchet MS', 'sans-serif';
+    font-size: 16px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 45px;
+    width: 100%;
+    background-color: var(--snow);
+}
+header img {
+    max-width: 37px;
+    height: 35px;
+    display: block;
+    padding: 10px;
+}
+header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
+}
+header div a {
+    background-color: var(--night-bordeaux);
+    color: var(--snow);
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    min-width: 110px;
+}
+header div i {
+    color: var(--night-bordeaux);
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-left: 21px;
+}
