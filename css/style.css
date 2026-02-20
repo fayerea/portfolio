@@ -2,6 +2,7 @@
     --rosewood: #C3185B;
     --snow: #FCF9F7;
     --night-bordeaux: #3D0E20;
+    --font-heading: 'new-kansas', 'sans-serif';
 }
 body {
     font-family: 'Poppins', 'Arial', 'Helvetica', 'Trebuchet MS', 'sans-serif';
@@ -15,21 +16,23 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 45px;
+    min-height: 60px;
     width: 100%;
     background-color: var(--snow);
 }
 header img {
-    max-width: 37px;
-    height: 35px;
+    max-width: 100%;
+    height: auto;
     display: block;
-    padding: 10px;
+    margin-left: 15px;
+    height: 40px;
+    width: auto;
 }
 header div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-right: 10px;
+    padding-right: 15px;
 }
 header div a {
     background-color: var(--night-bordeaux);
@@ -39,11 +42,59 @@ header div a {
     justify-content: center;
     align-items: center;
     border-radius: 100px;
-    min-width: 110px;
+    min-width: 120px;
+    height: 40px;
 }
 header div i {
     color: var(--night-bordeaux);
-    font-size: 1.5rem;
+    font-size: 30px;
     cursor: pointer;
-    margin-left: 21px;
+    margin-left: 18px;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+h2 {
+    /* font-family: var(--font-heading); */
+    font-size: 1.5em;
+    margin: 16px;
+}
+section.over-mij img {
+    width: calc(100% - 40px);
+    border-top-left-radius: 1000px;
+    border-top-right-radius: 1000px;
+    height: auto;
+    display: block;
+}
+section.over-mij p {
+    width: calc(100% - 40px);
+    hyphens: auto;
+}
+section.projecten {
+    background-color: var(--night-bordeaux);
+    color: var(--snow);
+}
+section.projecten img.project {
+    width: calc(100% -  40px);
+    border-top-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    height: auto;
+    display: block;
+}
+@media (min-width: 1000px) {
+    header {
+        min-height: 100px;
+    }
+    header img {
+        margin-left: 32px;
+        height: 60px;
+        width: auto;
+    }
+    header div a {
+        min-width: 160px;
+        height: 60px;
+    }
 }
