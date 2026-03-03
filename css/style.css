@@ -28,6 +28,9 @@ header img {
     height: 40px;
     width: auto;
 }
+nav {
+    display: none;
+}
 header div {
     display: flex;
     justify-content: space-between;
@@ -86,15 +89,30 @@ section.projecten img.project {
 }
 @media (min-width: 1000px) {
     header {
-        min-height: 100px;
+        min-height: 90px;
     }
     header img {
         margin-left: 32px;
-        height: 60px;
+        height: 55px;
         width: auto;
+    }
+    header nav {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    li {
+        list-style-type: none;
+        padding: 70px;
+        color: var(--night-bordeaux);
     }
     header div a {
         min-width: 160px;
-        height: 60px;
+        height: 55px;
+    }
+    header div i.fa-bars {
+        display: none;
     }
 }
