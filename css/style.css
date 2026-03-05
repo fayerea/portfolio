@@ -7,7 +7,7 @@
 body {
     font-family: 'Poppins', 'Arial', 'Helvetica', 'Trebuchet MS', 'sans-serif';
     font-size: 16px;
-    margin: 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
 }
@@ -64,6 +64,13 @@ h2 {
     /* font-family: var(--font-heading); */
     font-size: 1.5em;
     margin: 16px;
+    font-weight: bold;
+}
+section.over-mij div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 section.over-mij img {
     width: calc(100% - 40px);
@@ -88,6 +95,10 @@ section.projecten img.project {
     display: block;
 }
 @media (min-width: 1000px) {
+    .container {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
     header {
         min-height: 90px;
     }
@@ -114,5 +125,26 @@ section.projecten img.project {
     }
     header div i.fa-bars {
         display: none;
+    }
+    h2 {
+        font-size: clamp(1.5em, 2vw + 1em, 2em);
+    }
+    section.over-mij {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+    section.over-mij div.over {
+        display: flex;
+        flex-direction: row;
+    }
+    section.over-mij img {
+        max-width: 300px;
+    }
+    section.over-mij div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 }
