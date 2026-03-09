@@ -107,6 +107,10 @@ section.projecten img.project {
         height: 55px;
         width: auto;
     }
+    header div a {
+        min-width: 160px;
+        height: 55px;
+    }
     header nav {
         display: flex;
         flex-direction: row;
@@ -114,14 +118,30 @@ section.projecten img.project {
         left: 50%;
         transform: translateX(-50%);
     }
-    li {
-        list-style-type: none;
-        padding: 70px;
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+    }
+    header nav ul li {
+        padding: 60px;
         color: var(--night-bordeaux);
     }
-    header div a {
-        min-width: 160px;
-        height: 55px;
+    header nav ul a {
+        position: relative;
+        text-decoration: none;
+        color: var(--night-bordeaux);
+    }
+    header ul .active a::after,
+    header ul a:hover::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -4px; 
+        width: 60%;
+        height: 2px;
+        background-color: var(--night-bordeaux);
+        transition: opacity 0.3s ease;
     }
     header div i.fa-bars {
         display: none;
