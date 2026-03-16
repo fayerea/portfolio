@@ -28,16 +28,69 @@ header img {
     height: 40px;
     width: auto;
 }
-nav {
+.menu {
+    position: absolute;
+    z-index: 999;
+    background: var(--night-bordeaux);
+    height: 100vh;
+    width: 60%;
+    right: 0;
+    top: 0;
+    padding: 0 32px;
     display: none;
 }
-header div {
+
+.menu.open {
+    display: unset;
+}
+
+.menu-bar {
+    justify-content: space-between;  
+    height: 60px;
+}
+.menu div.menu-bar {
+    display: flex;
+    flex-direction: row;
+}
+.menu nav, .menu nav a, .menu p, .menu i {
+    color: var(--snow);
+}
+.menu nav ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.menu p {
+    font-weight: bold;
+}
+.menu li {
+   list-style-type: none;
+   display: flex;
+   padding-bottom: 16px;
+}
+.menu li a {
+    text-decoration: none;
+    display: flex;
+    gap: 48px;
+}
+.menu i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu nav .see-more {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+header div.contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-right: 15px;
 }
-header div a {
+header div.contact a {
     background-color: var(--night-bordeaux);
     color: var(--snow);
     text-decoration: none;
@@ -48,7 +101,7 @@ header div a {
     min-width: 120px;
     height: 40px;
 }
-header div i {
+header div.contact i {
     color: var(--night-bordeaux);
     font-size: 30px;
     cursor: pointer;
@@ -107,16 +160,13 @@ section.projecten img.project {
         height: 55px;
         width: auto;
     }
-    header div a {
+    header div.contact a {
         min-width: 160px;
         height: 55px;
     }
     header nav {
         display: flex;
         flex-direction: row;
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
     }
     header nav ul {
         display: flex;
@@ -124,7 +174,7 @@ section.projecten img.project {
         list-style: none;
     }
     header nav ul li {
-        padding: 60px;
+        padding-left: 60px;
         color: var(--night-bordeaux);
     }
     header nav ul a {
@@ -143,7 +193,7 @@ section.projecten img.project {
         background-color: var(--night-bordeaux);
         transition: opacity 0.3s ease;
     }
-    header div i.fa-bars {
+    header div i.fa-bars, i.fa-angle-right, li.contact, div.menu-bar {
         display: none;
     }
     h2 {

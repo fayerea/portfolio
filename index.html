@@ -6,6 +6,7 @@
     <meta name="description" content="Webdesigner, front-end developer en grafisch vormgever met ervaring in logo-ontwerp, branding en gebruiksvriendelijke websites.">
     
     <title>Faye - Portfolio</title>
+    <script src="js/menu.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://use.typekit.net/voo5mkc.css">
@@ -16,16 +17,26 @@
             <a href="index.html" class="logo">
                 <img src="afbeeldingen/FS-logo.svg" alt="FS - Portfolio van Faye Schlief, webdesigner en grafisch vormgever" class="header-logo">
             </a>
-            <nav>
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Over mij</a></li>
-                </ul>
-            </nav>
-            <div>
+            <div class="menu">
+                <div class="menu-bar">
+                    <p class="menu-label">Menu</p>
+                    <i id="menu-close" class="fa-solid fa-xmark"></i>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li class="see-more">
+                                <a href="#">Portfolio</a>
+                                <i class="fa-solid fa-angle-right"></i>
+                        </li>
+                        <li><a href="#">Over mij</a></li>
+                        <li class="contact"><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="contact">
                 <a href="contact.html" class="contact-button">Contact</a>
-                <i class="fa-solid fa-bars"></i>
+                <i id="menu-open" class="fa-solid fa-bars"></i>
             </div>
         </header>
     <div class="container">
