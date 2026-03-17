@@ -13,7 +13,6 @@ body {
 }
 header {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
     min-height: 60px;
@@ -21,12 +20,32 @@ header {
     background-color: var(--snow);
 }
 header img {
-    max-width: 100%;
-    height: auto;
     display: block;
-    margin-left: 15px;
     height: 40px;
     width: auto;
+    margin-left: 15px;
+}
+header div.contact,
+header div.contact a {
+    display: flex;
+    align-items: center;
+}
+header div.contact {
+    padding-right: 15px;
+}
+header div.contact a {
+    background-color: var(--night-bordeaux);
+    justify-content: center;
+    border-radius: 100px;
+    min-width: 120px;
+    height: 40px;
+    text-decoration: none;
+}
+header div.contact i {
+    color: var(--night-bordeaux);
+    font-size: 30px;
+    cursor: pointer;
+    margin-left: 18px;
 }
 .menu {
     position: absolute;
@@ -39,74 +58,96 @@ header img {
     padding: 0 32px;
     display: none;
 }
-
 .menu.open {
     display: unset;
 }
-
-.menu-bar {
-    justify-content: space-between;  
-    height: 60px;
-}
-.menu div.menu-bar {
-    display: flex;
-    flex-direction: row;
-}
-.menu nav, .menu nav a, .menu p, .menu i {
+.menu nav,
+.menu nav a,
+.menu p,
+.menu i,
+div.contact a {
     color: var(--snow);
 }
-.menu nav ul {
-    padding: 0;
+.menu-bar,
+.menu div.menu-bar,
+.menu li,
+.menu li a,
+.menu i,
+.menu nav .see-more span.portfolio,
+.menu .submenu,
+.menu .submenu li,
+.menu span.opleiding,
+header .contact,
+div.contact a {
+    display: flex;
+}
+.menu-bar,
+.menu div.menu-bar,
+.menu nav .see-more span.portfolio,
+.menu span.opleiding,
+header .contact {
+    justify-content: space-between;
+    align-items: center;
+}
+.menu nav ul.list,
+.menu .submenu,
+.menu .submenu li,
+.menu nav .see-more {
     display: flex;
     flex-direction: column;
+}
+.menu-bar {
+    height: 60px;
+}
+.menu ul,
+.menu nav ul.list {
+    padding: 0;
+}
+
+.menu nav ul {
+    display: none;
+}
+
+.see-more-submenu,
+.opleiding-submenu {
+    display: none;
+}
+
+.see-more-submenu.open,
+.opleiding-submenu.open {
+    display: unset;
+}
+
+.menu li {
+   list-style-type: none;
+}
+.menu li a, 
+.menu span i {
+    padding-bottom: 1em;
+}
+.menu li a {
+    text-decoration: none;
+    gap: 48px;
+}
+.menu .submenu,
+.menu nav .see-more span.portfolio,
+.menu span.opleiding {
+    width: 100%;
+}
+.menu span.opleiding, 
+.menu li.projecten {
+    margin-left: 1em;
+}
+.menu .submenu li {
+    align-items: flex-start;
+    justify-content: center;
+    margin-left: 1em;
 }
 .menu p {
     font-weight: bold;
 }
-.menu li {
-   list-style-type: none;
-   display: flex;
-   padding-bottom: 16px;
-}
-.menu li a {
-    text-decoration: none;
-    display: flex;
-    gap: 48px;
-}
-.menu i {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.menu nav .see-more {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-header div.contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-right: 15px;
-}
-header div.contact a {
-    background-color: var(--night-bordeaux);
-    color: var(--snow);
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100px;
-    min-width: 120px;
-    height: 40px;
-}
-header div.contact i {
-    color: var(--night-bordeaux);
-    font-size: 30px;
-    cursor: pointer;
-    margin-left: 18px;
-}
+
+
 section {
     display: flex;
     justify-content: center;
@@ -223,5 +264,23 @@ section.projecten img.project {
     section.projecten {
         margin-left: calc(50% - 50vw);
         margin-right: calc(50% - 50vw);
+    }
+
+    .menu {
+        display: flex;
+        position: relative;
+        height: unset;
+        width: unset;
+        background: unset;
+    }
+
+    .menu nav a {
+        color: var(--night-bordeaux);
+        padding-bottom: 0;
+    }
+
+    .menu nav ul.list {
+        display: flex;
+        flex-direction: row;
     }
 }
