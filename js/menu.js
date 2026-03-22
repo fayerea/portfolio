@@ -3,14 +3,41 @@ document.getElementById('menu-open').addEventListener("click", (event) => {
 });
 document.getElementById('menu-close').addEventListener("click", (event) => {
     document.getElementsByClassName('menu')[0].classList.toggle("open");
+
+    if($('#see-more-sub').has('open'))
+    {
+        toggleParentSubMenu();
+    }
+
+    if($('.opleiding-submenu').has('open'))
+    {
+        toggleChildSubMenu();
+    }
+
+    $('#see-more-sub').removeClass('open');
+    $('.opleiding-submenu').removeClass('open');
 });
 
 document.getElementById('see-more-nav').addEventListener("click", (event) => {
-    console.log("click");
-    document.getElementsByClassName('see-more-submenu')[0].classList.toggle("open");
+   toggleParentSubMenu();
 })
 
 document.getElementById('opleiding').addEventListener("click", (event) => {
-    console.log("click");
-    document.getElementsByClassName('opleiding-submenu')[0].classList.toggle("open");
+   toggleChildSubMenu();
 })
+
+function toggleParentSubMenu() {
+       var submenu = $('#see-more-sub');
+    submenu.toggleClass("open");
+    var icon = $('#see-more-nav i');
+    icon.toggleClass('fa-angle-right');
+    icon.toggleClass('fa-angle-down');
+}
+
+function toggleChildSubMenu() {
+     var submenu = $('.opleiding-submenu');
+    submenu.toggleClass("open");
+    var icon = $('#opleiding i');
+    icon.toggleClass('fa-angle-right');
+    icon.toggleClass('fa-angle-down');
+}

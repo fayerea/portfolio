@@ -118,8 +118,13 @@ header .contact {
     display: unset;
 }
 
+.menu li.sub-sublist {
+       display: flex;
+   flex-direction: column;
+}
 .menu li {
    list-style-type: none;
+
 }
 .menu li a, 
 .menu span i {
@@ -134,9 +139,12 @@ header .contact {
 .menu span.opleiding {
     width: 100%;
 }
-.menu span.opleiding, 
-.menu li.projecten {
-    margin-left: 1em;
+.menu span.opleiding a, 
+.menu li.projecten a {
+    padding-left: 1em;
+}
+.opleiding-submenu li {
+    padding-left: 2em;
 }
 .menu .submenu li {
     align-items: flex-start;
