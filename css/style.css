@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Cooper Black';
+  src: url('/fonts/CooperBlack.woff2') format('woff2'),
+       url('/fonts/CooperBlack.woff') format('woff'),
+       url('/fonts/CooperBlack.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
     --rosewood: #C3185B;
     --snow: #FCF9F7;
@@ -163,8 +172,9 @@ section {
     flex-direction: column;
 }
 h2 {
-    /* font-family: var(--font-heading); */
+    font-family: 'Cooper Black', 'Arial Black', 'Helvetica Rounded', sans-serif;
     font-size: 1.5em;
+    color: var(--night-bordeaux);
     margin: 16px;
     font-weight: bold;
 }
@@ -179,7 +189,6 @@ section.over-mij img {
     border-top-left-radius: 1000px;
     border-top-right-radius: 1000px;
     height: auto;
-    display: block;
 }
 section.over-mij p {
     width: calc(100% - 40px);
@@ -189,12 +198,35 @@ section.projecten {
     background-color: var(--night-bordeaux);
     color: var(--snow);
 }
-section.projecten img.project {
-    width: calc(100% -  40px);
+section.projecten h2 {
+    color: var(--snow);
+}
+div.hoofdafbeelding {
+    padding: 0 20px;
+}
+div.hoofdafbeelding img{
+    width: 100%;
     border-top-left-radius: 80px;
     border-bottom-right-radius: 80px;
     height: auto;
     display: block;
+}
+div.extra-afbeeldingen {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+}
+div.extra-afbeeldingen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+footer {
+    background-color: var(--snow);
 }
 @media (min-width: 1000px) {
     .container {
