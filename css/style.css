@@ -20,6 +20,24 @@ body {
     display: flex;
     flex-direction: column;
 }
+h2 {
+    font-family: 'Cooper Black', 'Arial Black', 'Helvetica Rounded', sans-serif;
+    font-size: 1.5em;
+    color: var(--night-bordeaux);
+    margin: 16px;
+    font-weight: bold;
+}
+h3, p {
+    font-family: 'Poppins', 'Arial', 'Helvetica', 'Trebuchet MS', 'sans-serif';
+    margin: 0;
+    padding: 0;
+}
+h3 {
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 8px 0 0 0;
+    padding: 0;
+}
 header {
     display: flex;
     justify-content: space-between;
@@ -32,7 +50,7 @@ header img {
     display: block;
     height: 40px;
     width: auto;
-    margin-left: 15px;
+    margin-left: 16px;
 }
 header div.contact,
 header div.contact a {
@@ -40,7 +58,7 @@ header div.contact a {
     align-items: center;
 }
 header div.contact {
-    padding-right: 15px;
+    padding-right: 16px;
 }
 header div.contact a {
     background-color: var(--night-bordeaux);
@@ -54,7 +72,7 @@ header div.contact i {
     color: var(--night-bordeaux);
     font-size: 30px;
     cursor: pointer;
-    margin-left: 18px;
+    margin-left: 16px;
 }
 .menu {
     position: absolute;
@@ -171,18 +189,10 @@ section {
     align-items: center;
     flex-direction: column;
 }
-h2 {
-    font-family: 'Cooper Black', 'Arial Black', 'Helvetica Rounded', sans-serif;
-    font-size: 1.5em;
-    color: var(--night-bordeaux);
-    margin: 16px;
-    font-weight: bold;
-}
 section.over-mij div {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
 }
 section.over-mij img {
     width: calc(100% - 40px);
@@ -190,19 +200,41 @@ section.over-mij img {
     border-top-right-radius: 1000px;
     height: auto;
 }
+section.over-mij h3 {
+    display: flex;
+    justify-content: flex-start;
+    color: var(--rosewood);
+}
 section.over-mij p {
     width: calc(100% - 40px);
     hyphens: auto;
+    color: var(--night-bordeaux);
 }
+
+
+
 section.projecten {
     background-color: var(--night-bordeaux);
     color: var(--snow);
 }
 section.projecten h2 {
     color: var(--snow);
+    display: flex;
+    justify-content: center;
+}
+section.full-width {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: 100%;
+}
+.full-width-inner {
+    width: calc(100% - 40px);
+}
+.extra-afbeeldingen article {
+    width: 100%;
 }
 div.hoofdafbeelding {
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
 div.hoofdafbeelding img{
     width: 100%;
@@ -218,6 +250,7 @@ div.extra-afbeeldingen {
     align-items: center;
     justify-content: center;
     gap: 16px;
+    padding: 16px 0;
 }
 div.extra-afbeeldingen img {
     width: 100%;
